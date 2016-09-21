@@ -6,7 +6,7 @@ class ProgressBar():
         self.width = width
 
     def __call__(self,x):
-         # x in %
+         # x in percent
          self.pointer = int(self.width*(x/100.0))
          return "|" + "#"*self.pointer + "-"*(self.width-self.pointer)+\
                 "|\n %d percent done" % int(x) 
@@ -17,4 +17,4 @@ if __name__ == '__main__':
     for i in range(101):
         os.system('clear')
         print pb(i)
-        time.sleep(0.01)
+        time.sleep(0.1)
